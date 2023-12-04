@@ -9,8 +9,8 @@ const useProjects = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    const auth = Config.config?.githubAuth || "";
-    GetAllPublicRepos(auth === undefined ? "" : auth)
+    // const auth = Config.config?.githubAuth || "";
+    GetAllPublicRepos("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")
       .then((result) => {
         setRepos(
           result?.filter(

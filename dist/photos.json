@@ -1,0 +1,55 @@
+{
+    "Indonesia": {
+        "dir": "indonesia",
+        "images": [
+            "0A6910ED-9941-4074-9314-4BB245722BD7_1_102_o.jpeg",
+            "00D03E0A-D980-40DB-8693-4FA47F153D68_1_102_o.jpeg",
+            "08EE5076-8F67-41D3-8179-71B62F06AE15_1_102_o.jpeg",
+            "8F48501F-C734-4A2A-ACBB-B74E2F566C65_1_102_o.jpeg",
+            "10E33238-4717-46D1-BE5C-4C01F19706E8_1_102_a.jpeg",
+            "85AC78C2-56D4-4B37-8D08-981069344191_1_102_o.jpeg",
+            "6016F87A-0968-4220-B0AF-97A3F1AAF329_1_105_c.jpeg",
+            "26884881-3D56-4C5E-935F-B46ACEEA35A2_1_105_c.jpeg",
+            "A0CA8573-0CEF-4477-807A-83EDAA056493_1_105_c.jpeg",
+            "B6E3E32C-825A-4C90-BE30-222193FB0023_1_102_o.jpeg"
+        ]
+    },
+    "Singapore": {
+        "dir": "singapore",
+        "images": [
+            "1A9CEA5E-2722-4FE8-AAC7-B0780D976C05_1_102_o.jpeg",
+            "23D18F50-096A-4375-B8AD-AA440DE31A43_1_102_o.jpeg",
+            "69F8867F-6D6B-4478-8378-8C704132A2E8_1_102_o.jpeg",
+            "6975AC4E-4186-47B9-A9F0-D54B54ABBACE_1_105_c.jpeg"
+        ]
+    },
+    "Sri Lanka": {
+        "dir": "srilanka",
+        "images": [
+            "072130E4-EB5B-4769-9CDE-7C8F8AD20299_1_105_c.jpeg",
+            "AFA0D630-D2F7-4D25-8757-C8C887DE24EE_1_105_c.jpeg",
+            "B34C30FB-A40A-4E12-8C22-2728C22984E6_1_105_c.jpeg",
+            "DE9CC4FC-10DF-42AD-8756-D2B61BE1F943_1_105_c.jpeg"
+        ]
+    },
+    "Thailand": {
+        "dir": "thailand",
+        "images": [
+            "16A85B25-D5D9-46B7-BBA3-37D3D4AB6D22_1_105_c.jpeg"
+        ]
+    },
+    "Xinjiang": {
+        "dir": "xinjiang",
+        "images": [
+            "horse.jpeg",
+            "sunflower.jpeg",
+            "xiata1.jpeg",
+            "xiata2.jpeg",
+            "xiata3.jpeg"
+        ]
+    },
+    "Zhuhai": {
+        "dir": "zhuhai",
+        "images": []
+    }
+}

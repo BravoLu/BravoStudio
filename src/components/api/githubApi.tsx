@@ -25,10 +25,12 @@ export async function GetRepoInfo({ owner, repo, auth }: Props) {
 
 export async function GetAllPublicRepos(auth: string) {
   try {
+    console.log(auth)
     const response = await useOctokit(
       auth
     ).rest.repos.listForAuthenticatedUser();
     const publicRepos = response.data;
+    
     return publicRepos;
   } catch (error) {
     console.error("Error:", error);

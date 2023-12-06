@@ -18,7 +18,7 @@ import { CgImage, CgYoutube } from "react-icons/cg";
 import { AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 import { Link as ReactRouterLink } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
-import useConfig  from "./useConfig";
+import useConfig from "./useConfig";
 const NavBar = () => {
   const [isSmallerThanMd] = useMediaQuery("(max-width: 48em)");
   const Config = useConfig();
@@ -63,9 +63,6 @@ const NavBar = () => {
                 </Text>
                 <Text as={ReactRouterLink} to="/videos" fontWeight="bold">
                   Videos
-                </Text>
-                <Text as={ReactRouterLink} to="/workout" fontWeight="bold">
-                  Workout
                 </Text>
               </VStack>
             </Box>

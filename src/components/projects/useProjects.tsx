@@ -1,6 +1,13 @@
+declare module 'crypto-js'
 import { useEffect, useState } from "react";
 import { GetAllPublicRepos } from "../api/githubApi";
 import useConfig from "../useConfig";
+import * as CryptoJS from "crypto-js";
+
+function decryptAES(encryptedText: string, key: string, iv: string): string {
+  const decrypted = CryptoJS.AES.decrypt(encryptedText, key, { iv: CryptoJS.enc.Utf8.parse(iv) });
+  return decrypted.toString(CryptoJS.enc.Utf8);
+}
 
 const useProjects = () => {
   const [repos, setRepos] = useState<object | undefined | null>(null);
@@ -10,7 +17,8 @@ const useProjects = () => {
   useEffect(() => {
     setIsLoading(true);
     const auth = Config.config?.githubAuth || "";
-    GetAllPublicRepos(atob(auth))
+    // GetAllPublicRepos(atob(auth))
+    GetAllPublicRepos(decryptAES(auth, "key", "1"))
       .then((result) => {
         setRepos(
           result?.filter(

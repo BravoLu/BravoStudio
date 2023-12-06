@@ -12,5 +12,3 @@ export const loadConfig = async (): Promise<Config | null> => {
     return null;
   }
 };
-
-// export default loadConfig;

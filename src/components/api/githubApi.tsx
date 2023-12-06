@@ -24,7 +24,6 @@ export async function GetRepoInfo({ owner, repo, auth }: Props) {
 }
 
 export async function GetAllPublicRepos(auth: string) {
-  // var publicRepos
   try {
     const response = await octKitCli(
       auth

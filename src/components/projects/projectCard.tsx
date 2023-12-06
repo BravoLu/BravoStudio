@@ -13,13 +13,11 @@ import {
   Card,
   CardBody,
   ButtonGroup,
-  Divider,
   CardFooter,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { StarIcon } from "@chakra-ui/icons";
 import { FaGithub, FaGitAlt } from "react-icons/fa";
-import { useConfig } from "../configContext";
 
 export interface Repos {
   projectName: string;
@@ -55,10 +53,9 @@ function getTimeGap(timestamp: string) {
 }
 
 const ProjectCard = (props: Repos) => {
-  const Config = useConfig();
-  const imageUrl = `https://raw.githubusercontent.com/${Config.config?.githubUser}/${props.projectName}/main/images/background.jpg`;
+  const imageUrl = `/projects/${props.projectName}.jpg`;
   return (
-    <Card maxW="sm" width="100%" height="100%">
+    <Card width="100%" height="100%">
       <CardBody>
         <Image
           src={imageUrl}
@@ -68,9 +65,9 @@ const ProjectCard = (props: Repos) => {
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.onerror = null;
-            target.src = "/default-image.jpeg";
+            target.src = "/project-default-page.jpg";
           }}
-          fallbackSrc="/default-image.jpeg"
+          fallbackSrc="/project-default-page.jpg"
         />
         <Box
           color="gray.500"
@@ -116,7 +113,6 @@ const ProjectCard = (props: Repos) => {
           <Text noOfLines={3}>{props.desc}</Text>
         </Box>
       </CardBody>
-      <Divider />
       <CardFooter>
         <ButtonGroup spacing="2">
           <Button leftIcon={<FaGithub />} colorScheme="teal" variant="solid">

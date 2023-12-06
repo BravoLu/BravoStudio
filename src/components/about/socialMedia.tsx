@@ -3,7 +3,7 @@ import { AiFillGithub, AiOutlineTwitter, AiFillYoutube } from "react-icons/ai";
 import IcRed from "../icons/icRed";
 import IcBilibili from "../icons/icBilibili";
 import IcNotion from "../icons/icNotion";
-import { useConfig } from "../configContext";
+import useConfig from "../useConfig";
 
 const SocialMedia = () => {
   const Config = useConfig();

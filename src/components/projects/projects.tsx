@@ -10,15 +10,15 @@ const Projects = () => {
   const [page, setPage] = useState(1);
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <Box m={20}>
-      <SimpleGrid columns={5} gap={6}>
+    <Box m={{ base: 10, sm: 5, md: 10, lg: 20 }}>
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 5 }} gap={4} alignItems="center">
         {isLoading &&
           skeletons.map((skeleton) => <CardSkeleton key={skeleton} />)}
         {repos !== undefined &&
           repos != null &&
           Object.values(repos)
-            .slice((page - 1) * 10, page * 10 > repoNum ? repoNum : page * 10)
             .sort((a, b) => b["stargazers_count"] - a["stargazers_count"])
+            .slice((page - 1) * 10, page * 10 > repoNum ? repoNum : page * 10)
             .map((item) => (
               <GridItem w="100%" h="100%" bg="white.500" key={item["name"]}>
                 <ProjectCard
@@ -37,7 +37,7 @@ const Projects = () => {
       </SimpleGrid>
       <Pagination
         currentPage={page}
-        totalPages={repoNum % 10 == 0 ? repoNum / 10: repoNum / 10 + 1}
+        totalPages={repoNum % 10 == 0 ? repoNum / 10 : repoNum / 10 + 1}
         onPageChange={setPage}
       />
     </Box>

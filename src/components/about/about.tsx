@@ -13,21 +13,25 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
-import { useConfig } from "../configContext";
+import useConfig from "../useConfig";
 import SocialMedia from "./socialMedia";
 import PageList from "./pageList";
-import {AiOutlineWechat} from "react-icons/ai"
+import { AiOutlineWechat } from "react-icons/ai";
 
 const About = () => {
   const Config = useConfig();
   return (
-    <Flex align="center" justify="center" mt="11vh" mb="8vh">
+    <Flex
+      align="center"
+      justify="center"
+      m={{ base: 10, sm: 5, md: 10, lg: 20 }}
+    >
       <Card
-        direction={{ base: "column", sm: "row" }}
+        direction={{ base: "column", sm: "column", md: "column", lg: "row" }}
         overflow="hidden"
         variant="outline"
-        w="90vw"
-        h="130vh"
+        w="100%"
+        h="100%"
       >
         <Stack>
           <CardBody>
@@ -52,7 +56,6 @@ const About = () => {
           <Divider />
           <CardFooter justifyContent="center">
             <HStack>
-              <Text as="b">Contact me on: </Text>
               <AiOutlineWechat />
               <Image
                 src="/qrcode_for_gh_fcdd6f322f24_258.jpg"

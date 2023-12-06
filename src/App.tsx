@@ -3,11 +3,15 @@ import About from "./components/about/about";
 import Videos from "./components/videos/videos";
 import Photos from "./components/photography/photo";
 import Projects from "./components/projects/projects";
-import Workout from "./components/workout/workout";
 import Footer from "./components/footer";
 import { ConfigProvider } from "./components/configContext";
 import { ChakraProvider } from "@chakra-ui/react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 
 function App() {
   return (
@@ -20,7 +24,6 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/photos" element={<Photos />} />
             <Route path="/videos" element={<Videos />} />
-            <Route path="/workout" element={<Workout />} />
             <Route path="/" element={<About />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

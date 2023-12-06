@@ -8,6 +8,12 @@ import {
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
 
+export interface PhotoInfo {
+  locate?: string,
+  dir?: string,
+  images?: string[],
+}
+
 const PhotoCard = ({ imageUrl }: { imageUrl: string }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -19,8 +25,9 @@ const PhotoCard = ({ imageUrl }: { imageUrl: string }) => {
         transform: "scale(1.05)",
         transition: "transform 0.1s ease",
       }}
+      m={{ base: 2, sm: 2, md: 3, lg: 4 }}
     >
-      <Card width="300px" height="200px">
+      <Card width={{ base: 300, sm: 300, md: 300, lg: 300 }} height={{ base: 200, sm: 200, md: 200, lg:200 }}>
         <Image
           src={imageUrl}
           onClick={onOpen}

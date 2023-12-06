@@ -1,6 +1,6 @@
 import { Octokit } from "octokit";
 
-const useOctokit = (githubAuth: string) => {
+const octKitCli = (githubAuth: string) => {
   const cli = new Octokit({
     auth: githubAuth,
   });
@@ -15,7 +15,7 @@ interface Props {
 
 export async function GetRepoInfo({ owner, repo, auth }: Props) {
   try {
-    const response = await useOctokit(auth).rest.repos.get({ owner, repo });
+    const response = await octKitCli(auth).rest.repos.get({ owner, repo });
     const repoInfo = response.data;
     return { name: repoInfo.name };
   } catch (error) {
@@ -24,13 +24,12 @@ export async function GetRepoInfo({ owner, repo, auth }: Props) {
 }
 
 export async function GetAllPublicRepos(auth: string) {
+  // var publicRepos
   try {
-    console.log(auth)
-    const response = await useOctokit(
+    const response = await octKitCli(
       auth
     ).rest.repos.listForAuthenticatedUser();
     const publicRepos = response.data;
-    
     return publicRepos;
   } catch (error) {
     console.error("Error:", error);

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { Box, Grid, SimpleGrid, VStack } from "@chakra-ui/react";
+import { Box, SimpleGrid, VStack, HStack } from "@chakra-ui/react";
 import Pagination from "../utils/pagination";
 import PhotoCard from "./photoCard";
 import CategoryList from "./categoryList";
-import JsonLoader from "../utils/jsonLoader";
+import { LoadPhotos } from "../utils/loader";
 
 const Photos = () => {
   const [page, setPage] = useState(1);
@@ -13,37 +13,52 @@ const Photos = () => {
   const [imageNum, setImageNum] = useState(0);
   const imagesPerPage = 8;
   useEffect(() => {
-    JsonLoader("/photos.json")
+    LoadPhotos("/photos.json")
       .then((photo) => {
         const startIndex = (page - 1) * imagesPerPage;
-        const endIndex = Math.min(
-          page * imagesPerPage,
-          photo[selected]["images"].length
-        );
-        const visibleImages = photo[selected]["images"].slice(
-          startIndex,
-          endIndex
-        );
-        setImageNum(photo[selected]["images"].length);
-        setImages(visibleImages);
-        setDir(photo[selected]["dir"]);
+        const selectedPhoto = photo.find((p) => p?.locate === selected);
+        const imageCount =
+          selectedPhoto === undefined || selectedPhoto.images === undefined
+            ? 0
+            : selectedPhoto.images.length;
+        if (
+          imageCount !== 0 &&
+          selectedPhoto !== undefined &&
+          selectedPhoto.images !== undefined &&
+          selectedPhoto.dir != undefined
+        ) {
+          const endIndex = Math.min(page * imagesPerPage, imageCount);
+          const visibleImages = selectedPhoto.images.slice(
+            startIndex,
+            endIndex
+          );
+          setImageNum(selectedPhoto.images.length);
+          setImages(visibleImages);
+          setDir(selectedPhoto.dir);
+        }
       })
       .catch();
   }, [selected, page]);
 
   return (
-    <Box>
-      <CategoryList selectedCategory={selected} onSelect={setSelected} />
-      <Grid
-        gridTemplateRows={{ base: "80% auto" }}
-        gridTemplateColumns={"10% auto"}
-        color="black"
-        fontWeight="bold"
-        mt={10}
+    <HStack>
+      <Box
+        flex="initial"
+        width={{ base: "30%", sm: "30%", md: "10%", lg: "8%" }}
       >
-        <Box></Box>
+        <CategoryList selectedCategory={selected} onSelect={setSelected} />
+      </Box>
+      <Box>
         <VStack>
-          <SimpleGrid m="3%" spacing={4} templateColumns="repeat(4, 1fr)">
+          <SimpleGrid
+            mt={{ base: "20%", sm: "20%", md: "5%", lg: "5%" }}
+            spacing={4}
+            templateColumns={{
+              sm: "1",
+              md: "repeat(4, 1fr)",
+              lg: "repeat(4, 1fr)",
+            }}
+          >
             {images.map((filename, index) => (
               <PhotoCard imageUrl={`/photos/${dir}/${filename}`} key={index} />
             ))}
@@ -51,15 +66,15 @@ const Photos = () => {
           <Pagination
             currentPage={page}
             totalPages={
-                imageNum % imagesPerPage == 0
+              imageNum % imagesPerPage == 0
                 ? imageNum / imagesPerPage
                 : imageNum / imagesPerPage + 1
             }
             onPageChange={setPage}
           />
         </VStack>
-      </Grid>
-    </Box>
+      </Box>
+    </HStack>
   );
 };
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { GetAllPublicRepos } from "../api/githubApi";
-import { useConfig } from "../configContext";
+import useConfig from "../useConfig";
 
 const useProjects = () => {
   const [repos, setRepos] = useState<object | undefined | null>(null);
@@ -9,8 +9,8 @@ const useProjects = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    // const auth = Config.config?.githubAuth || "";
-    GetAllPublicRepos("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")
+    const auth = Config.config?.githubAuth || "";
+    GetAllPublicRepos(auth)
       .then((result) => {
         setRepos(
           result?.filter(
@@ -22,7 +22,7 @@ const useProjects = () => {
         setIsLoading(false);
       })
       .catch((error) => {
-        console.error("error: ", error)
+        console.error("error: ", error);
         setIsLoading(false);
       });
   }, [Config]);

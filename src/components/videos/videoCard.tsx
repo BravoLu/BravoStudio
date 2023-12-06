@@ -8,18 +8,17 @@ import {
 } from "@chakra-ui/react";
 
 export interface VideoInformation {
-    Id: string;
-    Heading: string;
-    Desc: string;
-    tags: string[];
-  }
+  Id: string;
+  Heading: string;
+  Desc: string;
+  tags: string[];
+}
 
 const VideoCard = ({ video }: { video: VideoInformation }) => {
   return (
     <Card width="100%" height="100%">
-      <AspectRatio maxW="560px" ratio={1}>
+      <AspectRatio ratio={1}>
         <iframe
-          title="naruto"
           src={`https://www.youtube.com/embed/${video.Id}`}
           allowFullScreen
         />

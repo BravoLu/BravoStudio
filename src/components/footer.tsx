@@ -1,5 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
-import { useConfig } from "./configContext";
+import useConfig from "./useConfig";
 
 const Footer = () => {
   const Config = useConfig();
@@ -14,7 +14,7 @@ const Footer = () => {
       textAlign="center"
     >
       <Box>
-        <Text as="b">
+        <Text as="b" fontSize={{base: 10, sm: 5, md: 10, lg: 15}}>
           &copy; 2023 {Config.config?.name}. All rights reserved.
         </Text>
       </Box>

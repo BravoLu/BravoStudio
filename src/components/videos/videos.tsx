@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { VStack, SimpleGrid } from "@chakra-ui/react";
 import VideoCard from "./videoCard";
 import Pagination from "../utils/pagination";
-import JsonLoader from "../utils/jsonLoader";
+import {LoadVideos} from "../utils/loader";
 import { VideoInformation } from "./videoCard";
 
 const Videos = () => {
@@ -11,7 +11,7 @@ const Videos = () => {
   const [totalPage, setTotalPage] = useState(0);
   const [videos, setVideos] = useState<VideoInformation[]>([]);
   useEffect(() => {
-    JsonLoader("/videos.json")
+    LoadVideos("/videos.json")
       .then((result) => {
         setVideos(result);
         setTotalPage(
@@ -23,11 +23,15 @@ const Videos = () => {
       .catch();
   }, []);
   return (
-    <VStack>
+    <VStack m={{ base: 10, sm: 10, md: 10, lg: 20 }}>
       <SimpleGrid
-        m="7%"
+        m={{ base: "7%", sm: "7%", md: "5%", lg: "3%" }}
         spacing={4}
-        templateColumns="repeat(4, 1fr)"
+        templateColumns={{
+          sm: "1",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
         width="90%"
         height="100%"
       >

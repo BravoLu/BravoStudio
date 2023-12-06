@@ -1,6 +1,5 @@
 import React, {
   createContext,
-  useContext,
   useEffect,
   useState,
   ReactNode,
@@ -12,9 +11,10 @@ interface Props {
   children: ReactNode;
 }
 
-const ConfigContext = createContext<{ config: Config | null }>({
+export const ConfigContext = createContext<{ config: Config | null }>({
   config: null,
 });
+
 
 export const ConfigProvider: React.FC<Props> = ({ children }) => {
   const [config, setConfig] = useState<Config | null>(null);
@@ -29,14 +29,4 @@ export const ConfigProvider: React.FC<Props> = ({ children }) => {
       {children}
     </ConfigContext.Provider>
   );
-};
-
-export const useConfig = () => {
-  const config = useContext(ConfigContext);
-  if (!config) {
-    throw new Error(
-      "ChakraConfigProvider not found. Make sure to use ChakraConfigProvider at the root of your app."
-    );
-  }
-  return config;
 };

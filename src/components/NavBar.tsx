@@ -123,11 +123,6 @@ const NavBar = () => {
             <Text>Videos</Text>
           </HStack>
         </ChakraLink>
-        <ChakraLink fontSize="xl" as={ReactRouterLink} to="/workout">
-          <HStack>
-            <Text>Workout</Text>
-          </HStack>
-        </ChakraLink>
         <Box>
           <ChakraLink href="https://github.com/BravoLu" target="_blank">
             <Icon as={FaGithub} h={8} w={8} />

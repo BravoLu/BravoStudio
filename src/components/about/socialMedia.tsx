@@ -1,9 +1,9 @@
 import { SimpleGrid, Box, GridItem, Link, Button } from "@chakra-ui/react";
 import { AiFillGithub, AiOutlineTwitter, AiFillYoutube } from "react-icons/ai";
 import IcRed from "../icons/icRed";
-import IcBilibili from "../icons/icBilibili";
 import IcNotion from "../icons/icNotion";
 import useConfig from "../useConfig";
+import IcMedium from "../icons/IcMedium";
 
 const SocialMedia = () => {
   const Config = useConfig();
@@ -61,10 +61,10 @@ const SocialMedia = () => {
             as={Link}
             bgColor="white"
             style={{ width: "8rem", height: "8rem" }}
-            href={Config.config?.bilibiliUrl}
+            href={Config.config?.mediumUrl}
             target="_blank"
           >
-            <IcBilibili boxSize={20} />
+            <IcMedium boxSize={20} />
           </Button>
         </GridItem>
         <GridItem>

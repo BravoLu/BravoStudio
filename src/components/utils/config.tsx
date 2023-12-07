@@ -12,7 +12,7 @@ interface Config {
   youtubeUrl: string;
   notionUrl: string;
   twitterUrl: string;
-  bilibiliUrl: string;
+  mediumUrl: string;
   selfIntro: string;
   photoCategory: Category[];
   githubAuth: string;

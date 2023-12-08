@@ -124,7 +124,7 @@ const NavBar = () => {
           </HStack>
         </ChakraLink>
         <Box>
-          <ChakraLink href="https://github.com/BravoLu" target="_blank">
+          <ChakraLink href={"https://github.com/BravoLu/BravoStudio"} target="_blank">
             <Icon as={FaGithub} h={8} w={8} />
           </ChakraLink>
         </Box>

@@ -57,5 +57,12 @@
         "locate": "Zhuhai",
         "dir": "zhuhai",
         "images": []
+    },
+    {
+        "locate": "Workout",
+        "dir": "workout",
+        "images": [
+            "5233baeb7bd44eeefc58a2142563e078.JPG"
+        ]
     }
 ]

@@ -20,4 +20,8 @@ photoCategory:
       subcategories: ["Singapore", "Sri Lanka", "Indonesia", "Thailand"],
     },
     { title: "Cities", subcategories: ["Zhuhai", "Xinjiang"] },
+    {
+      title: "Daily Life",
+      subcategories: ["Workout"]  
+    }
   ]

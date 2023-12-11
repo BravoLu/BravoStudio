@@ -16,14 +16,12 @@ import {
   Route,
   Routes,
   Navigate,
-  useLocation,
 } from "react-router-dom";
 
 function App() {
-  const location = useLocation();
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
-  }, [location]);
+  }, []);
   return (
     <ConfigProvider>
       <ChakraProvider>

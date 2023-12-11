@@ -64,5 +64,18 @@
         "images": [
             "5233baeb7bd44eeefc58a2142563e078.JPG"
         ]
+    },
+    {
+        "locate": "Marathon",
+        "dir": "marathon",
+        "images": [
+            "IMG_7066.JPG",
+            "IMG_7074.JPG",
+            "IMG_7131.JPG",
+            "IMG_7132.JPG",
+            "IMG_7154.JPG",
+            "IMG_7158.JPG"
+        ]
     }
+	
 ]

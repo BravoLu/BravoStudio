@@ -70,7 +70,7 @@ photoCategory:
     { title: "Cities", subcategories: ["Zhuhai", "Xinjiang"] },
     {
       title: "Daily Life",
-      subcategories: ["Workout"]  
+      subcategories: ["Workout", "Marathon"]  
     }
   ]
 ```

@@ -1,11 +1,16 @@
+import { useEffect } from "react";
 import NavBar from "./components/NavBar";
 import About from "./components/about/about";
 import Videos from "./components/videos/videos";
 import Photos from "./components/photography/photo";
 import Projects from "./components/projects/projects";
 import Footer from "./components/footer";
+import ReactGA from "react-ga";
 import { ConfigProvider } from "./components/configContext";
 import { ChakraProvider } from "@chakra-ui/react";
+
+ReactGA.initialize("G-HBRNGCS12H");
+
 import {
   BrowserRouter as Router,
   Route,
@@ -14,6 +19,9 @@ import {
 } from "react-router-dom";
 
 function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   return (
     <ConfigProvider>
       <ChakraProvider>

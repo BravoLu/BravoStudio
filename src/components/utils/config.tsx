@@ -17,6 +17,7 @@ interface Config {
   photoCategory: Category[];
   githubAuth: string;
   githubUser: string;
+  trackID: string;
 }
 
 export default Config;

@@ -9,12 +9,7 @@ import {
   Heading,
   HStack,
 } from "@chakra-ui/react";
-import {
-  Card,
-  CardBody,
-  ButtonGroup,
-  CardFooter,
-} from "@chakra-ui/react";
+import { Card, CardBody, ButtonGroup, CardFooter } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { StarIcon } from "@chakra-ui/icons";
 import { FaGithub, FaGitAlt } from "react-icons/fa";
@@ -100,7 +95,7 @@ const ProjectCard = (props: Repos) => {
               <Box as="span" ml="2" color="gray.600" fontSize="sm">
                 {props.forkCnt}
               </Box>
-              <FaGitAlt ml={1} />
+              <FaGitAlt />
             </Box>
           </HStack>
           <Stack direction="row">

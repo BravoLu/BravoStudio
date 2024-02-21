@@ -15,7 +15,7 @@ const PageList = () => {
       <ListItem>
         <HStack>
           <ListIcon as={InfoIcon} color="teal.500" />
-          <Text as="b">You can see all my personal projects </Text>
+          <Text as="b">Personal Projects </Text>
           <ChakraLink as={ReactRouterLink} to="/projects" color="teal.500">
             <ArrowForwardIcon
               boxSize={8}
@@ -31,7 +31,7 @@ const PageList = () => {
       <ListItem>
         <HStack>
           <ListIcon as={InfoIcon} color="teal.500" />
-          <Text as="b">I will post all the photos that I took on the journey </Text>
+          <Text as="b">Photos Gallery</Text>
           <ChakraLink as={ReactRouterLink} to="/photos" color="teal.500">
             <ArrowForwardIcon
               boxSize={8}
@@ -47,7 +47,7 @@ const PageList = () => {
       <ListItem>
         <HStack>
           <ListIcon as={InfoIcon} color="teal.500" />
-          <Text as="b">I make some videos about my daily life </Text>
+          <Text as="b">Vlogs </Text>
           <ChakraLink as={ReactRouterLink} to="/videos" color="teal.500">
             <ArrowForwardIcon
               boxSize={8}
@@ -63,7 +63,23 @@ const PageList = () => {
       <ListItem>
         <HStack>
           <ListIcon as={InfoIcon} color="teal.500" />
-          <Text as="b">My workout data can be tracked </Text>
+          <Text as="b">Digital Medals Exhibition</Text>
+          <ChakraLink as={ReactRouterLink} to="/workout" color="teal.500">
+            <ArrowForwardIcon
+              boxSize={8}
+              _hover={{
+                cursor: "pointer",
+                transform: "scale(1.2)",
+                transition: "transform 0.1s ease",
+              }}
+            />
+          </ChakraLink>
+        </HStack>
+      </ListItem>
+      <ListItem>
+        <HStack>
+          <ListIcon as={InfoIcon} color="teal.500" />
+          <Text as="b">Publications </Text>
           <ChakraLink as={ReactRouterLink} to="/workout" color="teal.500">
             <ArrowForwardIcon
               boxSize={8}

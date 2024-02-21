@@ -10,7 +10,7 @@ const Projects = () => {
   const [page, setPage] = useState(1);
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <Box m={{ base: 10, sm: 5, md: 10, lg: 20 }}>
+    <Box m={{ base: 10, lg: "100px" }}>
       <SimpleGrid columns={{ sm: 1, md: 2, lg: 5 }} gap={4} alignItems="center">
         {isLoading &&
           skeletons.map((skeleton) => <CardSkeleton key={skeleton} />)}

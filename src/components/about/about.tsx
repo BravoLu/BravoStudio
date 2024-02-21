@@ -27,7 +27,7 @@ const About = () => {
       m={{ base: 10, sm: 5, md: 10, lg: 20 }}
     >
       <Card
-        direction={{ base: "column", sm: "column", md: "column", lg: "row" }}
+        direction={{ base: "column", sm: "column", md: "row", lg: "row" }}
         overflow="hidden"
         variant="outline"
         w="100%"
@@ -39,17 +39,21 @@ const About = () => {
               <Box position="relative" padding="10">
                 <Divider />
                 <AbsoluteCenter bg="white" px="4">
-                  <Text color="teal.500">About Me</Text>
+                  <Text color="teal.500">About</Text>
                 </AbsoluteCenter>
               </Box>
             </Heading>
             <Text py="2" fontSize={25} textIndent="3rem">
-              {Config.config?.selfIntro}
+              I am LU, Shaohao (Bravo) from Zhuhai, Guangdong, China. I got both
+              the bachelor and the master degree in Sun Yat-sen University I am a
+              full stack engineer. I have worked as a backend engineer in{" "}
+              <Text as="b">Tencent</Text>. Now, I contribute myself as an
+              engineer in <Text as="b">Hong Kong, China SAR</Text>.
             </Text>
             <PageList />
             <Divider m={3} />
             <Text fontSize={20} as="b" color="teal.500">
-              You can find me on the following platforms:
+              Social Media:
             </Text>
             <SocialMedia />
           </CardBody>
@@ -66,7 +70,7 @@ const About = () => {
             </HStack>
           </CardFooter>
         </Stack>
-        <Image objectFit="cover" src="/avatar.jpeg" />
+        <Image height={{ base: "500px", sm: "500px", md: "700px", lg: "600px"}} src="/avatar.jpeg" />
       </Card>
     </Flex>
   );

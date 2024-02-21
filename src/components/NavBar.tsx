@@ -19,6 +19,7 @@ import { AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 import { Link as ReactRouterLink } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import useConfig from "./useConfig";
+
 const NavBar = () => {
   const [isSmallerThanMd] = useMediaQuery("(max-width: 48em)");
   const Config = useConfig();
@@ -64,6 +65,12 @@ const NavBar = () => {
                 <Text as={ReactRouterLink} to="/videos" fontWeight="bold">
                   Videos
                 </Text>
+                <Text as={ReactRouterLink} to="/medals" fontWeight="bold">
+                  Medals
+                </Text>
+                <Text as={ReactRouterLink} to="/publications" fontWeight="bold">
+                  Publications
+                </Text>
               </VStack>
             </Box>
           </PopoverContent>
@@ -77,7 +84,7 @@ const NavBar = () => {
       color="white"
       position="fixed"
       width="100%"
-      height="8%"
+      height="80px"
       zIndex="1"
       top="0"
       flexDirection={{ sm: "column", md: "row", lg: "row" }}
@@ -123,6 +130,18 @@ const NavBar = () => {
             <Text>Videos</Text>
           </HStack>
         </ChakraLink>
+        <ChakraLink fontSize="xl" as={ReactRouterLink} to="/medals">
+          <HStack>
+            <CgYoutube />
+            <Text>Medals</Text>
+          </HStack>
+        </ChakraLink>  
+        <ChakraLink fontSize="xl" as={ReactRouterLink} to="/publications">
+          <HStack>
+            <CgYoutube />
+            <Text>Publications</Text>
+          </HStack>
+        </ChakraLink>        
         <Box>
           <ChakraLink href={"https://github.com/BravoLu/BravoStudio"} target="_blank">
             <Icon as={FaGithub} h={8} w={8} />

@@ -4,6 +4,7 @@ import About from "./components/about/about";
 import Videos from "./components/videos/videos";
 import Photos from "./components/photography/photo";
 import Projects from "./components/projects/projects";
+import Medals from "./components/medals/Medals";
 import Footer from "./components/footer";
 import ReactGA from "react-ga";
 import { ConfigProvider } from "./components/configContext";
@@ -17,6 +18,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import Publications from "./components/publication/Publications";
 
 function App() {
   useEffect(() => {
@@ -34,6 +36,8 @@ function App() {
             <Route path="/videos" element={<Videos />} />
             <Route path="/" element={<About />} />
             <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/medals" element={<Medals/>} />
+            <Route path="/publications" element={<Publications/>} />
           </Routes>
         </Router>
         <Footer />

@@ -59,6 +59,19 @@
         "images": []
     },
     {
+        "locate": "Beijing",
+        "dir": "beijing",
+        "images": [
+            "IMG_7276.JPG",
+            "IMG_7269.JPG",
+            "IMG_7289.JPG",
+            "IMG_7354.JPG",
+            "IMG_7380.JPG",
+            "IMG_7441.JPG",
+            "IMG_7477.JPG"
+        ]
+    },
+    {
         "locate": "Workout",
         "dir": "workout",
         "images": [

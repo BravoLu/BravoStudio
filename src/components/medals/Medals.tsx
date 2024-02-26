@@ -34,7 +34,7 @@ const Medals = () => {
   };
 
   const selectType = {
-    title: "all",
+    title: "Type",
     options: [
       {
         desc: "All",
@@ -64,15 +64,15 @@ const Medals = () => {
   }, [year, type]);
 
   return (
-    <Box m="100px">
+    <Box m="50px" minH="1200px">
       <SimpleGrid
         columns={{ sm: 1, md: 3, lg: 5 }}
         gap={10}
         alignItems="center"
       >
-        <GridItem rowSpan={1} colSpan={{ sm: 1, md: 2, lg: 5 }} mt={10}>
-          <CustomMenu {...selectYear}></CustomMenu>
-          <CustomMenu {...selectType}></CustomMenu>
+        <GridItem rowSpan={1} colSpan={{ sm: 1, md: 3, lg: 5 }} mt={10}>
+          <CustomMenu {...selectYear} />
+          <CustomMenu {...selectType} />
         </GridItem>
 
         {medals.map((m, idx) => (

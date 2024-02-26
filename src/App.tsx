@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import NavBar from "./components/NavBar";
 import About from "./components/about/about";
 import Videos from "./components/videos/videos";
-import Photos from "./components/photography/photo";
+// import Photos from "./components/photography/photo";
+import PhotoTab from "./components/photography/PhotoTab";
 import Projects from "./components/projects/projects";
 import Medals from "./components/medals/Medals";
 import Footer from "./components/footer";
@@ -32,7 +33,7 @@ function App() {
           <Routes>
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/photos" element={<Photos />} />
+            <Route path="/photos" element={<PhotoTab />} />
             <Route path="/videos" element={<Videos />} />
             <Route path="/" element={<About />} />
             <Route path="*" element={<Navigate to="/" />} />

@@ -23,7 +23,7 @@ const Videos = () => {
       .catch();
   }, []);
   return (
-    <VStack m={{ base: 10, sm: 10, md: 10, lg: 20 }}>
+    <VStack m={{ base: 10, sm: 10, md: 10, lg: 20 }} minH="1200px">
       <SimpleGrid
         m={{ base: "7%", sm: "7%", md: "5%", lg: "3%" }}
         spacing={4}

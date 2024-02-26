@@ -84,7 +84,7 @@ const NavBar = () => {
       color="white"
       position="fixed"
       width="100%"
-      height="80px"
+      height="60px"
       zIndex="1"
       top="0"
       flexDirection={{ sm: "column", md: "row", lg: "row" }}
@@ -132,18 +132,19 @@ const NavBar = () => {
         </ChakraLink>
         <ChakraLink fontSize="xl" as={ReactRouterLink} to="/medals">
           <HStack>
-            <CgYoutube />
             <Text>Medals</Text>
           </HStack>
-        </ChakraLink>  
+        </ChakraLink>
         <ChakraLink fontSize="xl" as={ReactRouterLink} to="/publications">
           <HStack>
-            <CgYoutube />
             <Text>Publications</Text>
           </HStack>
-        </ChakraLink>        
+        </ChakraLink>
         <Box>
-          <ChakraLink href={"https://github.com/BravoLu/BravoStudio"} target="_blank">
+          <ChakraLink
+            href={"https://github.com/BravoLu/BravoStudio"}
+            target="_blank"
+          >
             <Icon as={FaGithub} h={8} w={8} />
           </ChakraLink>
         </Box>

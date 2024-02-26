@@ -22,14 +22,6 @@ const CategoryList = ({
 
   return (
     <VStack
-      width={{ base: "2%", sm: "20%", md: "20%", lg: "8%" }}
-      mt="7%"
-      ml={{ base: "2%", sm: "2%", md: "0%", lg: "0%" }}
-      position={{ base: "fixed", sm: "fixed", md: "fixed", lg: "fixed" }}
-      top={{ base: "5%", sm: "5%", md: "5%", lg: "0%" }}
-      left={{ base: "10%", sm: "10%", md: "5%", lg: "0%" }}
-      zIndex="999"
-      bgColor="white"
     >
       <Accordion defaultIndex={[0]} allowToggle justifyContent="center">
         {Config.config?.photoCategory.map((category) => (

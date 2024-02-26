@@ -13,7 +13,7 @@ const SocialMedia = () => {
         <GridItem>
           <Button
             as={Link}
-            style={{ width: "8rem", height: "8rem" }}
+            style={{ width: "6rem", height: "6rem" }}
             bgColor="white"
             href={Config.config?.githubUrl}
             target="_blank"
@@ -24,7 +24,7 @@ const SocialMedia = () => {
         <GridItem>
           <Button
             as={Link}
-            style={{ width: "8rem", height: "8rem" }}
+            style={{ width: "6rem", height: "6rem" }}
             bgColor="white"
             href={Config.config?.twitterUrl}
             target="_blank"
@@ -37,7 +37,7 @@ const SocialMedia = () => {
         <GridItem>
           <Button
             as={Link}
-            style={{ width: "8rem", height: "8rem" }}
+            style={{ width: "6rem", height: "6rem" }}
             bgColor="white"
             href={Config.config?.youtubeUrl}
             target="_blank"
@@ -49,33 +49,33 @@ const SocialMedia = () => {
         </GridItem>
         <Button
           as={Link}
-          style={{ width: "8rem", height: "8rem" }}
+          style={{ width: "6rem", height: "6rem" }}
           bgColor="white"
           href={Config.config?.xiaohongshuUrl}
           target="_blank"
         >
-          <IcRed boxSize={20} />
+          <IcRed boxSize={16} />
         </Button>
         <GridItem>
           <Button
             as={Link}
             bgColor="white"
-            style={{ width: "8rem", height: "8rem" }}
+            style={{ width: "6rem", height: "6rem" }}
             href={Config.config?.mediumUrl}
             target="_blank"
           >
-            <IcMedium boxSize={20} />
+            <IcMedium boxSize={16} />
           </Button>
         </GridItem>
         <GridItem>
           <Button
             as={Link}
             bgColor="white"
-            style={{ width: "8rem", height: "8rem" }}
+            style={{ width: "6rem", height: "6rem" }}
             href={Config.config?.notionUrl}
             target="_blank"
           >
-            <IcNotion boxSize={20} />
+            <IcNotion boxSize={16} />
           </Button>
         </GridItem>
       </SimpleGrid>

@@ -1,7 +1,6 @@
 import { SimpleGrid, Box, GridItem, Link, Button } from "@chakra-ui/react";
-import { AiFillGithub, AiOutlineTwitter, AiFillYoutube, AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiOutlineTwitter, AiFillYoutube, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
 import IcRed from "../icons/icRed";
-import IcNotion from "../icons/icNotion";
 import useConfig from "../useConfig";
 
 const SocialMedia = () => {
@@ -71,10 +70,10 @@ const SocialMedia = () => {
             as={Link}
             bgColor="white"
             style={{ width: "6rem", height: "6rem" }}
-            href={Config.config?.notionUrl}
+            href={Config.config?.instagramUrl}
             target="_blank"
           >
-            <IcNotion boxSize={16} />
+            <AiFillInstagram style={{ width: "100%", height: "100%"}}/>
           </Button>
         </GridItem>
       </SimpleGrid>

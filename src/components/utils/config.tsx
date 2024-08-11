@@ -18,6 +18,7 @@ interface Config {
   githubAuth: string;
   githubUser: string;
   trackID: string;
+  instagramUrl: string;
 }
 
 export default Config;
